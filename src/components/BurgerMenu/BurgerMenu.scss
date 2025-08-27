@@ -1,0 +1,126 @@
+@import '/src/styles/var.scss';
+
+.headerBurgerMenu {
+    position: absolute;
+    height: calc(70dvh + 150px);
+    padding: 65px 25px 45px 30px;
+    right: 0px;
+    top: 0;
+    background-color: rgb(136, 136, 136);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+    // z-index: 2;
+
+    &Nav {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        margin-bottom: 60px;
+
+        li {
+            padding-bottom: 28px;
+
+            a,
+            span {
+                cursor: pointer;
+                transition-duration: .2s;
+
+                &:hover {
+                    color: $main-color;
+                    transition-duration: .2s;
+                }
+
+                &:active {
+                    color: $main-active-color;
+                }
+            }
+        }
+    }
+
+    &Buttons {
+        &>* {
+            margin-bottom: 25px;
+        }
+
+    }
+
+    &LanguageSwitch {
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        color: red;
+
+        svg {
+            height: 18px;
+            margin-right: 6px;
+            cursor: pointer;
+
+            &:hover path {
+                stroke: $main-color
+            }
+        }
+    }
+
+    &Language {
+        margin-right: 8px;
+    }
+
+    &LanguageSwitcher {
+        display: flex;
+
+        svg {
+            margin: 0;
+        }
+    }
+
+    &Login {
+        padding: 10px 23px;
+        border: 2px solid $main-color;
+        border-radius: 20px;
+        cursor: pointer;
+        transition-duration: .3s;
+
+
+        &:hover {
+            background-color: rgba($main-color, 0.2);
+            transition-duration: .3s;
+        }
+
+        &:active {
+            background-color: $main-active-color;
+        }
+    }
+}
+
+.burgerMenuCloseBtn {
+    position: absolute;
+    top: 18px;
+    font-size: 30px;
+    right: 110px;
+    cursor: pointer;
+
+    &:hover {
+        color: $main-color;
+    }
+
+    &:active {
+        color: $main-active-color;
+    }
+}
+
+.burgerMenuOpenBtn {
+    font-size: 30px;
+    display: flex;
+    transform: rotate(90deg);
+    cursor: pointer;
+
+    &:hover {
+        color: $main-color;
+    }
+
+    &:active {
+        color: $main-active-color;
+    }
+}

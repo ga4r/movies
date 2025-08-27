@@ -1,0 +1,35 @@
+@import '/src/styles/var.scss';
+
+.backWrapper {
+    position: relative;
+    width: 100%;
+}
+
+.back {
+    position: relative;
+    display: inline-block; // Убедимся, что ширина кнопки определяется содержимым
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0; // Линия всегда находится снизу
+        left: 0; // Начинаем с левой стороны кнопки
+        height: 1px; // Толщина линии
+        width: 0; // Начальная ширина
+        background-color: #fff; // Цвет линии
+        transition: width 0.3s ease; // Плавная анимация ширины
+    }
+
+    &:hover::after {
+        width: 100%; // Линия заполняет ширину кнопки
+    }
+
+    a {
+        display: flex;
+        align-items: center;
+
+        svg {
+            padding-right: 10px;
+        }
+    }
+}
