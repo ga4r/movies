@@ -1,0 +1,42 @@
+@import '/src/styles/var.scss';
+
+.categoriesContainer {
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    box-shadow: inset 0 0 13px rgb(30 30 30), 0 0 13px rgba(0, 0, 0, .5);
+    background-color: rgba(35, 35, 35, 1);
+    top: 70px;
+    left: 46%;
+    padding: 10px 15px;
+    transform: translateX(-50%);
+    z-index: 2;
+    font-size: 14px;
+
+    & a {
+        padding: 10px 15px;
+        cursor: pointer;
+        transition-duration: .2s;
+
+        &:hover {
+            color: $main-color;
+            transition-duration: .2s;
+        }
+
+        &:active {
+            color: $main-active-color;
+        }
+    }
+}
+
+.categoriesBtnActive {
+    color: $main-active-color ;
+}
+
+
+@media (max-width: 800px) {
+    .categoriesContainer {
+        width: 268px;
+        left: -60%;
+    }
+}

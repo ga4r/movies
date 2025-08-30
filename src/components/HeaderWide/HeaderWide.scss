@@ -1,0 +1,182 @@
+@import '/src/styles/var.scss';
+
+.header {
+    &Nav {
+        display: flex;
+        justify-content: space-between;
+        font-family: "Imprima", sans-serif;
+
+        &>li {
+            display: flex;
+            align-items: center;
+            padding: 0 40px;
+            border-right: 1px solid #ACACAC;
+            height: 10px;
+
+            &:last-child {
+                padding-right: 0;
+                border: 0;
+            }
+
+            &:first-child {
+                padding-left: 0;
+            }
+
+            &>a,
+            &>span {
+                cursor: pointer;
+                transition-duration: .2s;
+
+                &:hover {
+                    color: $main-color;
+                    transition-duration: .2s;
+                }
+
+                &:active {
+                    color: $main-active-color;
+                }
+            }
+        }
+    }
+
+    &Buttons {
+        display: flex;
+        align-items: center;
+        // justify-content: space-between;
+        font-family: "Imprima", sans-serif;
+    }
+
+    &Language {
+        padding-left: 20px;
+        padding-right: 5px;
+
+        &Switch {
+            display: flex;
+            align-items: center;
+            padding-left: 20px;
+
+            &er {
+                display: flex;
+                cursor: pointer;
+                padding-right: 20px;
+
+                svg:hover path {
+                    stroke: $main-color
+                }
+            }
+        }
+    }
+
+    &Login {
+        padding: 10px 23px;
+        border: 2px solid $main-color;
+        border-radius: 20px;
+        cursor: pointer;
+        transition-duration: .3s;
+
+
+        &:hover {
+            background-color: $main-color;
+            transition-duration: .3s;
+        }
+
+        &:active {
+            background-color: $main-active-color;
+        }
+    }
+}
+
+@media (max-width: 1280px) {
+    .headerNav li {
+        padding: 0 25px;
+    }
+}
+
+@media (max-width: 1140px) {
+    .header {
+        &Nav li {
+            font-size: 16px;
+            padding: 0 20px;
+        }
+
+        &Language {
+            padding-left: 10px;
+            font-size: 16px;
+
+            &Switch {
+                padding-left: 13px;
+
+                &er {
+                    padding-right: 10px;
+                }
+            }
+        }
+
+        &Login {
+            padding: 5px 13px;
+            font-size: 16px;
+        }
+    }
+}
+
+
+@media (max-width: 951px) {
+    .header {
+
+        &Nav li {
+            font-size: 14px;
+        }
+
+        &LanguageSwitch {
+            padding-left: 9px;
+
+            svg {
+                width: 18px;
+            }
+        }
+
+        &Language {
+            padding-left: 8px;
+            font-size: 14px;
+
+            &Switcher {
+                padding-right: 6px;
+
+                svg {
+                    // font-size: 14px;
+                    width: 16px;
+                    height: 7px;
+                }
+            }
+        }
+
+        &Login {
+            font-size: 15px;
+            padding: 4px 10px;
+        }
+    }
+}
+
+@media (max-width: 857px) {
+    .header {
+        &Nav li {
+            font-size: 12px;
+        }
+
+        &Language {
+            font-size: 12px;
+            padding-left: 5px;
+            padding-right: 3px;
+
+            &Switch {
+                svg {
+                    width: 14px;
+                }
+            }
+        }
+
+        &Login {
+            font-size: 12px;
+        }
+    }
+}

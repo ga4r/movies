@@ -1,0 +1,100 @@
+@import '/src/styles/var.scss';
+
+.footer {
+    padding: 80px 61px 130px;
+
+    &Wrapper {
+        // margin: 0 auto;
+    }
+
+    &Info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &Text {
+        font-size: 22px;
+    }
+
+    &Nav {
+        margin-top: 60px;
+        display: flex;
+
+        li {
+            display: flex;
+            align-items: center;
+            border-right: 1px solid #ACACAC;
+            height: 10px;
+            padding: 0 35px;
+
+            a:hover {
+                color: $main-color;
+            }
+
+            a:active {
+                color: $main-active-color;
+            }
+
+
+            &:last-child {
+                padding-right: 0;
+                border-right: 0;
+            }
+
+            &:first-child {
+                padding-left: 0;
+            }
+        }
+    }
+}
+
+@media (max-width: 1140px) {
+    .footer {
+        padding: 50px 20px;
+
+        &Text {
+            font-size: 16px;
+        }
+
+        & ul li {
+            font-size: 13px;
+        }
+    }
+}
+
+@media (max-width: 791px) {
+    .footer {
+        padding: 100px 20px;
+
+        &Text {
+            font-size: 14px;
+        }
+
+        & ul li {
+            font-size: 11px;
+            padding: 0 20px;
+        }
+    }
+}
+
+@media (max-width: 554px) {
+    .footer {
+        padding: 100px 20px;
+
+        &Text {
+            font-size: 12px;
+        }
+
+        & ul {
+            margin-top: 25px;
+
+            li {
+                font-size: 8px;
+                padding: 0 20px;
+            }
+        }
+
+    }
+}

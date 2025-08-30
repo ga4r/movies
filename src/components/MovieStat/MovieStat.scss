@@ -1,0 +1,148 @@
+.movieStat {
+    display: flex;
+    align-items: center;
+    font-family: "Imprima", sans-serif;
+
+    &>* {
+        margin-right: 25px;
+    }
+}
+
+.content {
+
+    &Type {
+        background-color: #fff;
+        color: black;
+        padding: 4px 5px;
+    }
+
+    &Quality {
+        border: 1px solid #fff;
+        padding: 3px 5px;
+    }
+
+    &Genre {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &Time {
+        display: flex;
+        align-items: center;
+
+        svg {
+            margin-right: 7px;
+        }
+    }
+
+
+    &Date {
+        display: flex;
+        align-items: center;
+
+        svg {
+            margin-right: 7px;
+            margin-top: 0.5px;
+        }
+    }
+}
+
+@media (max-width: 580px) {
+    .firstScreen {
+        .movieStat {
+            width: 270px;
+            display: flex;
+            align-items: center;
+
+            .content {
+
+                &Type,
+                &Quality,
+                &Genre,
+                &Time,
+                &Date {
+                    margin-right: 15px;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    .firstScreen {
+        .movieStat {
+            width: 180px;
+
+            .content {
+
+                &Type,
+                &Quality,
+                &Genre,
+                &Time,
+                &Date {
+                    margin-right: 10px;
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1008px) {
+    .movieInfo {
+        .movieStat {
+            width: 100%;
+
+            .content {
+
+                &Type,
+                &Quality,
+                &Genre,
+                &Time,
+                &Date {
+                    margin-right: 15px;
+
+                    &:last-child {
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 980px) {
+    .movieMainContentMoblie {
+        .movieInfo .movieStat {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+    }
+}
+
+@media (max-width: 580px) {
+    .movieMainContentMoblie {
+        .movieInfo .movieStat {
+            // height: 100px;
+
+            &>* {
+                align-items: center;
+                justify-content: center;
+                flex-wrap: wrap;
+
+                &>svg {
+                    margin-right: 7px;
+                    margin-bottom: 5px;
+                }
+            }
+            & .contentGenre, .contentTime, .contentDate {
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+            }
+        }
+    }
+}

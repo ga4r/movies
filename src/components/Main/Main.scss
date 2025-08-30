@@ -1,0 +1,244 @@
+@import '/src/styles/var.scss';
+
+.main {
+    width: 100%;
+    padding-top: 85px;
+
+    &ScreenBanner {
+        height: 2400px;
+        width: 100dvw;
+        position: absolute;
+        top: 550px;
+        left: 50%;
+        transform: translateX(-50%);
+        object-fit: cover;
+        z-index: -2;
+        user-select: none;
+    }
+
+    &Info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 50px;
+    }
+
+    &Descr {
+        width: 364px;
+    }
+
+    &FirstText {
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        color: $main-color;
+    }
+
+    &SecondText {
+        font-size: 54px;
+        font-family: 'Homenaje', sans-serif;
+    }
+
+    &Content {
+        padding-bottom: 80px;
+
+        &Btn {
+            width: 1000px;
+            justify-content: flex-end;
+            display: flex;
+            flex-wrap: wrap;
+            margin-right: -15px;
+
+            & Button {
+                width: 120px;
+                height: 45px;
+                background-color: rgba(46, 46, 46, .96);
+                border: 1px solid rgba(46, 46, 46, .96);
+                text-align: center;
+                border-radius: 24px;
+                margin-bottom: 15px;
+                margin-right: 15px;
+                box-shadow: 0 0 20px rgba(0, 0, 0, .4);
+
+                &:hover {
+                    border: 1px solid $main-color;
+                }
+                &:active {
+                    background-color: $main-active-color;
+                }
+
+            }
+
+            .active {
+                background-color: $main-color;
+                color: #000;
+                font-weight: bold;
+            }
+        }
+    }
+
+    .bigMovies {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        .bigMovie {
+            margin: 0 20px;
+
+            &:last-child {
+                margin: 0 0 0 20px;
+            }
+
+            &:first-child {
+                margin: 0 20px 0 0;
+            }
+        }
+    }
+}
+
+@media (max-width: 1340px) {
+    .main {
+        &ScreenBanner {
+            height: 3400px;
+            filter: brightness(70%);
+        }
+
+        & .bigMovies {
+            padding: 0 21px;
+            justify-content: center;
+
+            .bigMovie {
+
+                &:first-child {
+                    margin-bottom: 30px;
+                }
+
+                &:nth-child(3) {
+                    margin-right: 0;
+                    margin-left: 20px;
+                }
+
+                &:nth-child(4) {
+                    // margin-right: 20px;
+                    margin-left: 0;
+                }
+            }
+        }
+
+        &Content {
+            &Btn {
+                margin-right: -10px;
+
+                & button {
+                    margin: 0 10px 10px 0;
+                    font-size: 15px;
+                    width: 90px;
+                    height: 35px;
+                }
+            }
+        }
+    }
+
+}
+
+@media (max-width: 1046px) {
+    .main {
+        &ScreenBanner {
+            height: 3140px;
+        }
+
+        & .bigMovies {
+            justify-content: space-around;
+            padding: 0 61px;
+
+            & .bigMovie {
+                // margin: 0 0 0 25px;
+
+                &:first-child,
+                &:last-child,
+                &:nth-child(3),
+                &:nth-child(2) {
+                    margin: 0 0 35px 0px;
+                }
+
+                &:nth-child(2),
+                &:nth-child(4) {
+                    margin-left: 40px;
+                }
+            }
+        }
+
+        &Content {
+            padding-bottom: 40px;
+        }
+    }
+}
+
+@media (max-width: 791px) {
+    .main {
+        &ScreenBanner {
+            top: 490px;
+            height: 3200px;
+            filter: brightness(80%);
+
+        }
+
+        & .bigMovies {
+            padding: 0 76px;
+
+            & .bigMovie {
+                width: 200px;
+
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+
+                &:first-child,
+                &:nth-child(2),
+                &:nth-child(3),
+                &:nth-child(4) {
+                    margin: 0 0 60px 0;
+                }
+
+                // &:nth-child(2),
+                // &:nth-child(3) {
+                //     margin-left: 40px;
+                // }
+            }
+        }
+    }
+}
+
+@media (max-width: 700px) {
+    .main {
+        & .bigMovies {
+            padding: 0 40px;
+
+            & .bigMovie {
+                .info {
+                    .title {
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 650px) {
+    .main {
+        & .bigMovies {
+            padding: 0 10px;
+        }
+    }
+}
+
+@media (max-width: 580px) {
+    .main {
+        & .bigMovies {
+            .bigMovie {
+                width: 179px;
+            }
+        }
+    }
+}

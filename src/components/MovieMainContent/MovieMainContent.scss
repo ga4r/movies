@@ -1,0 +1,469 @@
+@import '/src/styles/var.scss';
+
+.movieMainContent {
+    scroll-behavior: auto;
+    display: flex;
+    margin-bottom: 135px;
+    margin-top: 75px;
+}
+
+.movieMainContentWide {
+    display: flex;
+
+    .movie {
+        &Poster {
+            position: relative;
+            margin-right: 85px;
+
+            img {
+                transition: .3s;
+                width: 400px;
+                box-shadow: 0 0 36px rgba(0, 0, 0, .6);
+            }
+
+            &:has(button:hover) {
+                img {
+                    filter: brightness(60%);
+                    transition: .3s ease .1s;
+                }
+            }
+
+            button {
+                position: relative;
+                bottom: 50%;
+                left: 50%;
+                translate: -50%;
+            }
+        }
+
+
+        &Title {
+            font-size: 55px;
+            margin-bottom: 30px;
+            font-family: 'Rubik Mono One';
+            word-spacing: -28px;
+            letter-spacing: -3px;
+        }
+
+        &Info {
+            width: 800px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        &Response {
+            margin-top: 15px;
+            display: flex;
+            padding: 35px;
+            background: rgba(63, 63, 63, 0.44);
+            width: 485px;
+            height: 112px;
+            border-radius: 20px;
+            align-items: center;
+            justify-content: space-between;
+
+            .share {
+                display: flex;
+                flex-direction: column;
+                font-size: 14px;
+                align-items: center;
+                cursor: pointer;
+            }
+
+            .rating {
+                display: flex;
+                flex-direction: column;
+                font-size: 27px;
+                display: flex;
+                align-items: center;
+
+                .rank {
+                    margin-top: 10px;
+                    display: flex;
+                    align-items: center;
+                    letter-spacing: 2px;
+
+                    svg {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin-right: 8px;
+                    }
+                }
+
+                .appeal {
+                    font-size: 21px;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        &Text {
+            margin-top: 30px;
+            font-family: 'Homenaje', serif;
+            font-size: 23px;
+
+            >* {
+                margin-bottom: 10px;
+
+                span {
+                    color: $main-color;
+                    margin-right: 12px;
+                }
+            }
+        }
+
+        &Descr {
+            margin-bottom: 22px;
+        }
+    }
+
+    .trailer {
+        display: block;
+        position: absolute;
+        z-index: 2;
+        left: 50%;
+        bottom: 50%;
+        transform: translateX(-50%) translateY(50%);
+        background-color: rgb(20, 20, 20);
+        width: 850px;
+        height: 482.5px;
+        box-shadow: 0 0 15px #000;
+
+        &>p {
+            font-size: 30px;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgb(78, 78, 78);
+            font-family: 'Homenaje';
+            letter-spacing: 2px;
+        }
+
+        &Cancel {
+            padding: 5px 8px;
+            cursor: pointer;
+            position: absolute;
+            top: 0;
+            right: -50px;
+            font-size: 25px;
+            color: rgb(255, 255, 255);
+            font-weight: bold;
+            z-index: 200;
+
+            &:hover {
+                color: $main-color;
+            }
+            &:active{
+                color: $main-active-color;
+            }
+        }
+
+        iframe {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translateX(-50%) translateY(-50%);
+        }
+    }
+}
+
+
+
+@media (max-width: 1320px) {
+    .movieMainContent {
+        .movieMainContentWide {
+
+            .movie {
+                &Poster {
+                    margin-right: 65px;
+                }
+
+                &Info {
+                    width: 600px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1008px) {
+    .movieMainContent {
+        .movieMainContentWide {
+            .movie {
+                &Info {
+                    width: 500px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 980px) {
+    .movieMainContent {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.movieMainContentMoblie {
+    .movie {
+        &Header {
+            margin-bottom: 100px;
+        }
+
+        &Poster {
+            display: flex;
+            justify-content: center;
+            // position: relative;
+
+            img {
+                transition: .3s;
+                width: 400px;
+                box-shadow: 0 0 36px rgba(0, 0, 0, .6);
+            }
+
+            &:has(button:hover) {
+                img {
+                    filter: brightness(60%);
+                    transition: .3s ease .1s;
+                }
+            }
+
+            button {
+                position: absolute;
+                // bottom: 50%;
+                bottom: -20%;
+                left: 50%;
+                translate: -50%;
+            }
+        }
+
+        &Title {
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            font-size: 50px;
+            font-family: 'Rubik Mono One';
+            word-spacing: -28px;
+            margin-bottom: 50px;
+        }
+
+        &Info {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        &Response {
+            margin-top: 30px;
+            display: flex;
+            padding: 35px;
+            background: rgba(63, 63, 63, 0.44);
+            width: 485px;
+            height: 112px;
+            border-radius: 20px;
+            align-items: center;
+            justify-content: space-between;
+
+            &Wrapper {
+                display: flex;
+                justify-content: center;
+            }
+
+            .share {
+                display: flex;
+                flex-direction: column;
+                font-size: 14px;
+                align-items: center;
+                cursor: pointer;
+            }
+
+            .rating {
+                display: flex;
+                flex-direction: column;
+                font-size: 27px;
+                display: flex;
+                align-items: center;
+
+                .rank {
+                    margin-top: 10px;
+                    display: flex;
+                    align-items: center;
+                    letter-spacing: 2px;
+
+                    svg {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin-right: 8px;
+                    }
+                }
+
+                .appeal {
+                    font-size: 21px;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        &Text {
+            margin-top: 30px;
+            font-family: 'Homenaje', serif;
+            font-size: 23px;
+            padding: 0 20px;
+
+
+            >* {
+                margin-bottom: 15px;
+
+                span {
+                    color: $main-color;
+                    margin-right: 12px;
+                }
+            }
+
+            .movieDescr {
+                margin-bottom: 38px;
+            }
+
+        }
+    }
+
+    .trailer {
+        display: block;
+        position: absolute;
+        z-index: 2;
+        left: 50%;
+        bottom: 50%;
+        transform: translateX(-50%) translateY(50%);
+        background-color: rgb(20, 20, 20);
+        width: 650px;
+        height: 482.5px;
+        box-shadow: 0 0 15px #000;
+
+        &>p {
+            font-size: 30px;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgb(78, 78, 78);
+            font-family: 'Homenaje';
+            letter-spacing: 2px;
+        }
+
+        &Cancel {
+            padding: 5px 8px;
+            cursor: pointer;
+            position: absolute;
+            top: 0;
+            right: -50px;
+            font-size: 25px;
+            color: rgb(255, 255, 255);
+            font-weight: bold;
+            z-index: 200;
+
+            &:hover {
+                color: $main-color;
+            }
+            &:active{
+                color: $main-active-color;
+            }
+        }
+
+        iframe {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translateX(-50%) translateY(-50%);
+        }
+    }
+}
+
+
+@media (max-width: 580px) {
+    .movieMainContentMoblie {
+        .movie {
+            &Poster {
+
+                img {
+                    width: 350px;
+                }
+
+                button {
+                    svg {
+                        width: 100px;
+                    }
+                }
+            }
+
+            &Title {
+                padding-left: 0;
+                font-size: 25px;
+                word-spacing: -5px;
+            }
+
+            &Response {
+                height: 95px;
+                width: 350px;
+                padding: 20px;
+
+                .rating {
+                    .appeal {
+                        font-size: 16px;
+                    }
+
+                    .rank {
+                        svg {
+                            width: 26px;
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 420px) {
+    .movieMainContentMoblie {
+        .movieResponse {
+            flex-direction: column;
+            height: 250px;
+            width: 80%;
+        }
+    }
+}
+
+@media (max-width: 980px) {
+    .movieMainContentMoblie {
+        .trailer {
+            width: 610px;
+            height: 347.5px;
+        }
+    }
+}
+
+
+@media (max-width: 800px) {
+    .movieMainContentMoblie {
+        .trailer {
+            width: 390px;
+            height: 280px;
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .movieMainContentMoblie {
+        .trailer {
+            &Cancel {
+                top: -50px;
+                left: 0;
+            }
+        }
+    }
+}
