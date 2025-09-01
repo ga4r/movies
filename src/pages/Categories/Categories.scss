@@ -1,0 +1,43 @@
+@import '/src/styles/var.scss';
+
+.categories {
+    &Wrapper {
+        margin-top: 100px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        .bigMovie {
+            margin: 40px;
+
+            &s {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    }
+}
+
+.categoryScreenBanner {
+    // height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    object-fit: cover;
+    z-index: -1;
+    user-select: none;
+    // max-height: 100%; 
+    filter: blur(10px) brightness(20%);
+}
+.categoryName {
+    font-family: 'Homenaje';
+    font-size: 30px;
+    letter-spacing: 1px;
+    span {
+        margin-left: 5px;
+        color: $main-color;
+    }
+}

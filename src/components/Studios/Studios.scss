@@ -1,0 +1,113 @@
+@import '/src/styles/var.scss';
+
+.studios {
+    padding: 50px 0;
+    display: flex;
+    // justify-content: space-between;
+}
+
+.studio {
+    margin: 0 23px;
+
+    &:first-child {
+        margin-left: 0;
+    }
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 1340px) {
+    .studios {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding: 60px 8px;
+
+        & .studio {
+            margin: 0;
+
+            &:first-child {
+                margin-right: 40px;
+            }
+
+            &:nth-child(3) {
+                margin-left: 40px;
+            }
+
+            &:last-child {
+                margin-top: 40px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1047px) {
+    .studios {
+        padding: 60px 52px;
+
+        & .studio {
+            margin: 0;
+
+            &:first-child,
+            &:nth-child(2) {
+                margin: 0 0 40px 0;
+            }
+
+            &:nth-child(3),
+            &:last-child {
+                margin: 0;
+            }
+
+            &:nth-child(2),
+            &:nth-child(4) {
+                // margin-left: 40px;
+            }
+        }
+    }
+}
+
+
+@media (max-width: 791px) {
+    .studios {
+        padding: 60px 20px;
+
+        .studio {
+            a>img {
+                width: 280px;
+            }
+
+            &:first-child,
+            &:nth-child(2),
+            &:nth-child(3),
+            &:nth-child(4) {
+                margin: 0 0 40px 0;
+            }
+        }
+    }
+}
+
+@media (max-width: 725px) {
+    .studios {
+        padding: 60px 20px;
+
+        .studio {
+            a>img {
+                width: 240px;
+            }
+        }
+    }
+}
+
+@media (max-width: 620px) {
+    .studios {
+        padding: 60px 0px;
+
+        .studio {
+            a>img {
+                width: 200px;
+            }
+        }
+    }
+}

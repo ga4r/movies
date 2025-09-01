@@ -1,0 +1,108 @@
+@import '/src/styles/var.scss';
+
+.searchInputContainer {
+    // position: absolute;
+    position: fixed;
+    top: 90px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+}
+
+.headerSearch {
+    padding-right: 20px;
+    height: 10px;
+    display: flex;
+    align-items: center;
+    border-right: 1px solid #ACACAC;
+
+    svg:hover path {
+        fill: $main-color;
+    }
+
+    .searchInput {
+        font-family: "Ubuntu", sans-serif;
+        height: 50px;
+        width: 700px;
+        border-radius: 22px;
+        padding: 10px 20px;
+        font-size: 20px;
+        background-color: rgba(255, 255, 255, 0.9);
+        box-shadow: inset 0 0 12px rgba(0, 0, 0, .3);
+        color: black;
+    }
+
+    .searchCancel {
+        padding: 5px 8px;
+        cursor: pointer;
+        position: absolute;
+        top: 2.5px;
+        right: 10px;
+        font-size: 25px;
+        color: rgb(85, 85, 85);
+        font-weight: bold;
+
+        &:hover {
+            color: black
+        }
+    }
+
+    svg {
+        cursor: pointer;
+    }
+}
+
+@media (max-width: 1140px) {
+    .header {
+        &Search {
+            padding-right: 10px;
+        }
+    }
+}
+
+@media (max-width: 951px) {
+    .header {
+        &Search {
+            padding-right: 6px;
+
+            svg {
+                width: 20px;
+            }
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    .headerSearch {
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        padding: 0;
+        border: 0;
+        margin-right: -5px;
+
+        .searchInput {
+            width: 500px;
+        }
+        svg {
+            width: 30px;
+            height: 50px;
+        }
+    }
+}
+
+@media (max-width: 610px) {
+    .headerSearch {
+        .searchInput {
+            width: 400px;
+        }
+    }
+}
+
+@media (max-width: 470px) {
+    .headerSearch {
+        .searchInput {
+            width: 300px;
+        }
+    }
+}

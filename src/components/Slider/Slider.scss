@@ -1,0 +1,23 @@
+.slider {
+    overflow: hidden;
+    mask-image: linear-gradient(to right, rgba(0, 0, 0, 1) 90%, rgba(0, 0, 0, 0) 100%);
+}
+
+.carousel-item {
+    // height: 600px;
+    width: 450px;
+    margin: 0 10px;
+
+    &>a>img {
+        // width: 250px; 
+        width: 400px;
+        height: auto;
+        user-select: none;
+    }
+}
+
+@media (max-width: 450px) {
+    .tns-ovh {
+        width: 700px;
+    }
+}

@@ -1,0 +1,49 @@
+@import '/src/styles/var.scss';
+
+.yearContainer {
+    width: 918px;
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    top: 70px;
+    left: 49%;
+    padding: 10px 15px;
+    transform: translateX(-50%);
+    z-index: 2;
+    font-size: 14px;
+    
+    box-shadow: inset 0 0 13px rgb(30 30 30), 0 0 13px rgba(0, 0, 0, .5);
+    background-color: rgba(35, 35, 35, 1);
+    & a {
+        padding: 10px 15px;
+        cursor: pointer;
+        transition-duration: .2s;
+
+        &:hover {
+            color: $main-color;
+            transition-duration: .2s;
+        }
+        &:active {
+            color: $main-active-color;
+        }
+
+    }
+}
+
+.yearsBtnActive {
+    color: $main-active-color ;
+}
+
+@media (max-width: 1140px) {
+    .yearContainer {
+        width: 503px;
+    }
+}
+
+@media (max-width: 800px) {
+    .yearContainer {
+        width: 269px;
+        top: 104px;
+        left: -60%;
+    }
+}

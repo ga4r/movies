@@ -1,0 +1,18 @@
+@import '/src/styles/var.scss';
+
+.scrollToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 1000;
+    opacity: .9;
+    
+    svg {
+        width: 50px;
+        background-color: rgb(0, 0, 0);
+        border-radius: 50%;
+        border: 1px solid rgba(0, 0, 0, .4);
+        // height: 20px;
+    }
+}

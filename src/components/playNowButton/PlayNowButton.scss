@@ -1,0 +1,58 @@
+@import '/src/styles/var.scss';
+
+.playNowBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 141px;
+    height: 44px;
+    // margin-top: 47px;
+    font-size: 18px;
+    border: 2px solid $main-color;
+    border-radius: 24px;
+    background-color: rgba(36, 36, 36, .96);
+    font-family: "Imprima", sans-serif;
+    text-transform: uppercase;
+    transition-duration: .3s;
+
+    svg {
+        margin-right: 10px;
+    }
+
+    &:hover {
+        background-color: $main-color;
+        transition-duration: .3s;
+    }
+
+    &:active {
+        background-color: $main-active-color;
+    }
+}
+
+
+@media (max-width: 580px) {
+    .movieMainContentMoblie {
+        .movieInfo .playNowBtn {
+            display: flex;
+            width: 90px;
+            height: 40px;
+            font-size: 15px;
+
+            svg {
+                width: 9px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                // margin-right: 20px;
+            }
+        }
+    }
+}
+
+@media (max-width: 420px) {
+    .movieMainContentMoblie {
+        .movieInfo .playNowBtn {
+            width: 120px;
+        }
+    }
+}

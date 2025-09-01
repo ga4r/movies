@@ -1,0 +1,59 @@
+@import '/src/styles/var.scss';
+
+.pagination {
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Ubuntu';
+
+    &Controller,
+    &Button {
+        font-size: 20px;
+        margin: 0 10px;
+        padding: 5px 5px;
+        cursor: pointer;
+
+
+        &:hover {
+            color: $main-color
+        }
+
+        &:active {
+            color: $main-active-color;
+        }
+    }
+
+    &Active {
+        color: $main-color
+    }
+}
+
+@media (max-width: 600px) {
+
+    .pagination {
+        width: 400px;
+
+        &Controller,
+        &Button {
+            font-size: 17px;
+            margin: 0 7px;
+            padding: 5px 5px;
+            cursor: pointer;
+        }
+    }
+}
+
+
+@media (max-width: 450px) {
+    .pagination {
+        width: 300px;
+        &Controller,
+        &Button {
+            font-size: 14px;
+            margin: 0 5px;
+            padding: 5px 5px;
+            cursor: pointer;
+        }
+    }
+}
