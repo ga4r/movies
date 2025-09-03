@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import bgImage from "../../img/mbg.jpg";
 import "./Main.scss";
 import axios, { all } from "axios";
-import allMovies from "./db.json"; //delete kodga fench
+import allMovies from "./db.json"; //delete when need to use fetch
 import Slider from "../Slider/Slider";
 import BigMovie from "../BigMovie/BigMovie";
 import Studios from "../Studios/Studios";
@@ -34,8 +34,6 @@ function Main({ showBanner }) {
   // useEffect(() => {
   //   getMovies();
   // }, []);
-
-  // const filterMovies = (genre) => movies.filter((movie) => movie.genre.includes(genre));
 
   const handleFiltering = (genre) => {
     if (genre === "all") {
